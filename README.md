@@ -1,2 +1,2 @@
 # Advent of Code 2020
-My journey attempting the challenges in the [Advent of Code](https://adventofcode.com/)
+Tag along while I attempt to solve the challenges for this years [Advent of Code](https://adventofcode.com/)
