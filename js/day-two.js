@@ -1026,25 +1026,15 @@ function convertToPasswordDict(ln) {
     return obj;
 }
 
-const testData = convertToPasswordDict(passwordArr["1"]);
-function tester(p) {
-    //let pt = "?" + p; // prepend a character to circumvent zero-based indexing constraint
-
-}
-
-tester(testData.password);
-
 for (const index in passwordArr) {
+    
     const passData = convertToPasswordDict(passwordArr[index]);
-
-
-    /* Part One Logic
-    ---------------------------------
-    */
+    
     // remove all letters aside from check letter and return length
     const occurences = passData.password.split(passData.letter).length-1;
     
     var arr = [];
+    // part one logic 
     if (occurences >= passData.min && occurences <= passData.max) {
         passData.bool = true;
         arr.push(passData);
@@ -1060,10 +1050,7 @@ for (const index in passwordArr) {
         //console.log(matches); // 572 results
     });
 
-    /* Part Two Logic
-    ----------------------
-    */
-
+    // part two logic
     var testArr = [];
     const pt = "?" + passData.password;
     if (pt.charAt(passData.min) === passData.letter && pt.charAt(passData.max) !== passData.letter || pt.charAt(passData.max) === passData.letter && pt.charAt(passData.min) !== passData.letter) {
@@ -1079,7 +1066,7 @@ for (const index in passwordArr) {
     } else {
         console.log("Tobaggon HR would not be happy");
     }
-    //console.log(testArr);
+
     testArr.forEach(a => {
         console.log(a); // 306 matches
     })
