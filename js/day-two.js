@@ -1064,7 +1064,7 @@ for (const index in passwordArr) {
         passData.valid = false;
         //console.log(`Invalid! both index ${passData.min} and ${passData.max} contain the letter ${passData.letter} `);
     } else {
-        console.log("Tobaggon HR would not be happy");
+        console.log("Toboggon HR would not be happy");
     }
 
     testArr.forEach(a => {
