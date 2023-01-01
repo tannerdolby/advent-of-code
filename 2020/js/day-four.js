@@ -1046,13 +1046,13 @@ function convertToDict(arr) {
     for (key of arr) {
         const keys = key.split(":");
         let k = keys[0];
-        let val = keys[1];
+        let val = keys[1].trim();
         obj[k] = val;
     }
     return obj;
 }
 
-convertToDict(["keys: yo", "are: dude", "cool: hey"]);
+console.log(convertToDict(["key1: red", "key2: yellow", "key3: purple"]));
 
 // check if each obj (passport) has the required keys
 function isValid(obj) {
